@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
@@ -12,69 +13,27 @@
     <title>Document</title>
 </head>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/home.css">
-    <title>Document</title>
-</head>
-
 <body>
     <header>
         <div class="gutter-right logo">
-            <img src="../assets/big-logo.png" />
+            <img src="./assets/big-logo.png" />
         </div>
     </header>
     <main>
-        <button id="logout">Logout</button>
         <section class="main-section">
-            <div class="top">
-                <div class="left">
-                    <h2>Current Poll</h2>
-                    <div class="current-poll">
-                        <div class="question">Default Question</div>
-                        <div class="option-1-title">Default Option 1</div>
-                        <button class="option-1-button">Vote</button>
-                        <div class="option-1-votes">0</div>
-                        <div class="option-2-title">Default Option 2</div>
-                        <div class="option-2-votes">0</div>
-                        <button class="option-2-button">Vote</button>
-                        <button class="finish-button">Finish Poll</button>
-                    </div>
-                </div>
-                <div class="form-container">
-                    <form id="poll-form">
-                        <label>
-                            Question
-                            <input name="question" />
-                        </label>
-    
-                        <label>
-                            Option one
-                            <input name="option-1-title" />
-                        </label>
-    
-                        <label>
-                            Option two
-                            <input name="option-2-title" />
-                        </label>
-                        <button>Add Question and Options</button>
-                    </form>    
-                </div>
-            </div>
-            <div class="bottom">
-                <h2>Past Polls</h2>
-                <div class="past-polls">
-
-                </div>
+            <div class="auth-forms">
+                <form id="sign-up">
+                    Sign Up
+                    <label>
+                        Email
+                        <input type="email" name="email" />
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" name="password" />
+                    </label>
+                    <button>Submit</button>
+                </form>    
             </div>
         </section>
     </main>
@@ -82,7 +41,7 @@
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
 
-    <script type="module" src="./polls.js"></script>
+    <script type="module" src="./app.js"></script>
 </body>
 
 </html>
